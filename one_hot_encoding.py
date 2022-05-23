@@ -42,6 +42,26 @@ def ohe_encoding_v1():
     print("--- %s seconds ---" % (time.time() - start_time))
 
 
+def ohe_encoding_v2():
+    "Loads V1 processed train/test data and one hot encodes ingredients for each recipe"
+    start_time = time.time()
+    print("Loading data...",end="")
+    train = pd.read_json("data/train_cleaned_v1.json").sample(4000)
+    test  = pd.read_json("data/test_cleaned_v1.json").sample(1000)
+    print("done!")
+    print("Encoding training data...",end="", flush=True)
+    train_encoded, encoder = encode_recipes(train)
+    print("done!")
+    print("Encoding testing data...",end="", flush=True)
+    test_encoded,   _      = encode_recipes(test, enc=encoder)
+    print("done!")
+    print("Saving dataframes to file...",end="", flush=True)
+    train_encoded.to_csv("data/ohe_train_recipes_v2.csv", index=False)
+    test_encoded.to_csv( "data/ohe_test_recipes_v2.csv",  index=False)    
+    print("done!")
+    print("--- %s seconds ---" % (time.time() - start_time))
+
+
 if __name__ == "__main__":
-    ohe_encoding_v1()
+    ohe_encoding_v2()
 
