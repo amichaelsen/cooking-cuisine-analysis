@@ -46,8 +46,8 @@ def ohe_encoding_v2():
     "Loads V1 processed train/test data and one hot encodes ingredients for each recipe"
     start_time = time.time()
     print("Loading data...",end="")
-    train = pd.read_json("data/train_cleaned_v1.json").sample(4000)
-    test  = pd.read_json("data/test_cleaned_v1.json").sample(1000)
+    train = pd.read_json("data/train_cleaned_v1.json")
+    test  = pd.read_json("data/test_cleaned_v1.json")
     print("done!")
     print("Encoding training data...",end="", flush=True)
     train_encoded, encoder = encode_recipes(train)
