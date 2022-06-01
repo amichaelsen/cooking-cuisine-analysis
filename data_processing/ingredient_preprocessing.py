@@ -24,8 +24,8 @@ def clean_ingredient1(ingredient):
 
 def ingredient_cleaning_v1():
     print("Loading data...",end="")
-    train = pd.read_json("data/train.json")
-    test  = pd.read_json("data/test.json")
+    train = pd.read_json("../data/train.json")
+    test  = pd.read_json("../data/test.json")
     print("done!")
     print("Cleaning ingredients in training data...",end="",flush=True)
     train_processed_ingredients = train.explode("ingredients").set_index('id')[['ingredients']].applymap(clean_ingredient1).reset_index()
@@ -37,8 +37,8 @@ def ingredient_cleaning_v1():
     test_processed_recipes = test_processed_ingredients.groupby("id").agg(list).reset_index()
     print("done!")
     print("Saving processed ingredients to csv...",end="",flush=True)
-    train_processed_recipes.to_json("data/train_cleaned_v1.json",orient="records")
-    test_processed_recipes.to_json("data/test_cleaned_v1.json",orient="records")
+    train_processed_recipes.to_json("../data/train_cleaned_v1.json",orient="records")
+    test_processed_recipes.to_json("../data/test_cleaned_v1.json",orient="records")
     print("done!")
 
 if __name__ == "__main__":

@@ -26,8 +26,8 @@ def ohe_encoding_v1():
     "Loads raw train/test data and one hot encodes ingredients for each recipe"
     start_time = time.time()
     print("Loading data...",end="")
-    train = pd.read_json("data/train.json")
-    test  = pd.read_json("data/test.json")
+    train = pd.read_json("../data/train.json")
+    test  = pd.read_json("../data/test.json")
     print("done!")
     print("Encoding training data...",end="", flush=True)
     train_encoded, encoder = encode_recipes(train)
@@ -36,8 +36,8 @@ def ohe_encoding_v1():
     test_encoded,   _      = encode_recipes(test, enc=encoder)
     print("done!")
     print("Saving dataframes to file...",end="", flush=True)
-    train_encoded.to_csv("data/ohe_train_recipes_v1.csv", index=False)
-    test_encoded.to_csv( "data/ohe_test_recipes_v1.csv",  index=False)    
+    train_encoded.to_csv("../data/ohe_train_recipes_v1.csv", index=False)
+    test_encoded.to_csv( "../data/ohe_test_recipes_v1.csv",  index=False)    
     print("done!")
     print("--- %s seconds ---" % (time.time() - start_time))
 
@@ -46,8 +46,8 @@ def ohe_encoding_v2():
     "Loads V1 processed train/test data and one hot encodes ingredients for each recipe"
     start_time = time.time()
     print("Loading data...",end="")
-    train = pd.read_json("data/train_cleaned_v1.json")
-    test  = pd.read_json("data/test_cleaned_v1.json")
+    train = pd.read_json("../data/train_cleaned_v1.json")
+    test  = pd.read_json("../data/test_cleaned_v1.json")
     print("done!")
     print("Encoding training data...",end="", flush=True)
     train_encoded, encoder = encode_recipes(train)
@@ -56,8 +56,8 @@ def ohe_encoding_v2():
     test_encoded,   _      = encode_recipes(test, enc=encoder)
     print("done!")
     print("Saving dataframes to file...",end="", flush=True)
-    train_encoded.to_csv("data/ohe_train_recipes_v2.csv", index=False)
-    test_encoded.to_csv( "data/ohe_test_recipes_v2.csv",  index=False)    
+    train_encoded.to_csv("../data/ohe_train_recipes_v2.csv", index=False)
+    test_encoded.to_csv( "../data/ohe_test_recipes_v2.csv",  index=False)    
     print("done!")
     print("--- %s seconds ---" % (time.time() - start_time))
 
