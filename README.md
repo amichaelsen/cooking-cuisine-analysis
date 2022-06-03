@@ -4,6 +4,8 @@ This repo contains work for the [Erdos Institute's Bootcamp (May 2022)](https://
 
 The directory `data_proccessing/` contains python scripts for reproducing the data cleaning and encoding (read and saved from the `data/` directory). See the README within the directory for reproducibility instructions. The analysis is divided into classification models (`classifiers/`) and cuisine clustering analysis (`clustering/`), each containing several corresponding analysis notebooks. 
 
+The best classification model was obtained using multi-class logistic regression (notebook [here](https://github.com/amichaelsen/cooking-cuisine-analysis/blob/main/classifiers/logistic_model.ipynb)), with a classification accuracy of 77.9%. A close second was the LinearSVC model (77.2%). k-Nearest Neighbors, LDA, and random forests all acheived slightly lower accuracies between 68% and 74%. 
+
 ### Potential Stakeholders/Applications:
 * Recipe Hosting Websites trying to automatically tag/predict cuisines of new recipes 
   * Could also use similar clustering techniques to generate recipe lists (wihtin or between cuisines) 
