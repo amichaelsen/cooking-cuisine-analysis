@@ -1,6 +1,6 @@
-# cooking-cuisine-analysis
+# Cuisine Exploration Project
 
-This repo contains work for the Erdos Institute's Bootcamp (May 2022) for the Explorer Team (Alejandra Castillo, Anya Michaelsen, Benjamin Sheller, Karan Srivastava). We worked with the ["What's Cooking?" dataset](https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset) from Kaggle.
+This repo contains work for the [Erdos Institute's Bootcamp (May 2022)](https://www.erdosinstitute.org/code) for the Explorer Team (Alejandra Castillo, Anya Michaelsen, Benjamin Sheller, Karan Srivastava). We worked with the ["What's Cooking?" dataset](https://www.kaggle.com/datasets/kaggle/recipe-ingredients-dataset) from Kaggle.
 
 The directory `data_proccessing/` contains python scripts for reproducing the data cleaning and encoding (read and saved from the `data/` directory). See the README within the directory for reproducibility instructions. The analysis is divided into classification models (`classifiers/`) and cuisine clustering analysis (`clustering/`), each containing several corresponding analysis notebooks. 
 
