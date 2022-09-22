@@ -27,5 +27,5 @@ Applying agglomerative clustering and visualizing the result using a dendrogram 
   *  They could also target ads for restaurants of those cuisines 
 * Restaurant apps (e.g. delivery platforms or Yelp) could identify which cuisines people like and then recommend adjacent cuisines using the cuisine clustering 
 
-Project presentation and writeup can be found on the [Erdos Institute Project Database](https://www.erdosinstitute.org/project-database)
+Project presentation and writeup can be found on the [Erdos Institute Project Database](https://www.erdosinstitute.org/project-database).
 
